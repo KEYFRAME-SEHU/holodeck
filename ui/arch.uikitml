@@ -31,8 +31,16 @@
     margin-bottom: 8;
   }
 
+  .program-list {
+    flex-direction: column;
+  }
+
   .program-btn {
     margin-bottom: 6;
+  }
+
+  .end-hidden {
+    display: none;
   }
 
   .program-label {
@@ -48,17 +56,22 @@
 </style>
 <Panel id="arch-root" class="arch-root">
   <div class="arch-title">HOLODECK ARCH</div>
-  <div class="arch-sub">Select a program</div>
-  <Button id="program-1" class="program-btn" size="sm" variant="secondary">
-    <ButtonLabel class="program-label">Dixon Hill, 1941 San Francisco</ButtonLabel>
-  </Button>
-  <Button id="program-2" class="program-btn" size="sm" variant="secondary">
-    <ButtonLabel class="program-label">Ancient West, Tombstone 1881</ButtonLabel>
-  </Button>
-  <Button id="program-3" class="program-btn" size="sm" variant="secondary">
-    <ButtonLabel class="program-label">Beach Resort, Risa</ButtonLabel>
-  </Button>
+  <div id="arch-sub" class="arch-sub">Select a program</div>
+  <div id="program-list" class="program-list">
+    <Button id="program-1" class="program-btn" size="sm" variant="secondary">
+      <ButtonLabel class="program-label">Dixon Hill, 1941 San Francisco</ButtonLabel>
+    </Button>
+    <Button id="program-2" class="program-btn" size="sm" variant="secondary">
+      <ButtonLabel class="program-label">Ancient West, Tombstone 1881</ButtonLabel>
+    </Button>
+    <Button id="program-3" class="program-btn" size="sm" variant="secondary">
+      <ButtonLabel class="program-label">Beach Resort, Risa</ButtonLabel>
+    </Button>
+  </div>
   <div id="arch-status" class="arch-status">No program loaded.</div>
+  <Button id="end-program-btn" class="program-btn end-hidden" size="sm" variant="secondary">
+    <ButtonLabel class="program-label">End Program</ButtonLabel>
+  </Button>
   <Button id="arch-dismiss-btn" size="sm" variant="secondary">
     <ButtonLabel class="program-label">Dismiss Arch</ButtonLabel>
   </Button>
