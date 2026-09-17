@@ -1,0 +1,60 @@
+<!--
+  Holodeck voice link: always-visible control panel mounted by the door.
+  Shows the last heard command, the computer's status, and fallback buttons.
+  UIKit units are centimetres. Uses the Horizon kit dark color scheme.
+-->
+<meta preferred-color-scheme="dark" />
+<style>
+  .bar-root {
+    flex-direction: column;
+    width: 150;
+    border-color: #f5e900;
+    border-width: 1;
+    padding-top: 8;
+    padding-left: 10;
+    padding-right: 10;
+    padding-bottom: 10;
+  }
+
+  .bar-title {
+    color: #f5e900;
+    font-size: 6;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 6;
+  }
+
+  .transcript {
+    color: #cfe3ff;
+    font-size: 4;
+    margin-bottom: 4;
+  }
+
+  .status {
+    color: #8a93a6;
+    font-size: 3.5;
+    margin-bottom: 8;
+  }
+
+  .vbtn {
+    margin-bottom: 6;
+  }
+
+  .vbtn-label {
+    font-size: 3.5;
+  }
+</style>
+<Panel class="bar-root">
+  <div class="bar-title">HOLODECK VOICE LINK</div>
+  <div id="transcript" class="transcript">Say "Computer, ..."</div>
+  <div id="status" class="status">Voice offline. Press Enable Voice.</div>
+  <Button id="voice-enable-btn" class="vbtn" size="sm" variant="secondary">
+    <ButtonLabel class="vbtn-label">Enable Voice</ButtonLabel>
+  </Button>
+  <Button id="talk-btn" class="vbtn" size="sm" variant="secondary">
+    <ButtonLabel class="vbtn-label">Push to Talk</ButtonLabel>
+  </Button>
+  <Button id="arch-toggle-btn" class="vbtn" size="sm" variant="secondary">
+    <ButtonLabel id="arch-toggle-label" class="vbtn-label">Show Arch</ButtonLabel>
+  </Button>
+</Panel>

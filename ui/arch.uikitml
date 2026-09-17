@@ -1,0 +1,65 @@
+<!--
+  The Arch: holodeck control panel. Hidden until summoned by voice
+  ("Computer, show me the arch") or the Show Arch button.
+  UIKit units are centimetres. Uses the Horizon kit dark color scheme.
+-->
+<meta preferred-color-scheme="dark" />
+<style>
+  .arch-root {
+    flex-direction: column;
+    width: 170;
+    border-color: #f5e900;
+    border-width: 1;
+    padding-top: 10;
+    padding-left: 12;
+    padding-right: 12;
+    padding-bottom: 12;
+  }
+
+  .arch-title {
+    color: #f5e900;
+    font-size: 7;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4;
+  }
+
+  .arch-sub {
+    color: #8a93a6;
+    font-size: 4;
+    text-align: center;
+    margin-bottom: 8;
+  }
+
+  .program-btn {
+    margin-bottom: 6;
+  }
+
+  .program-label {
+    font-size: 4;
+  }
+
+  .arch-status {
+    color: #cfe3ff;
+    font-size: 3.5;
+    margin-top: 6;
+    margin-bottom: 8;
+  }
+</style>
+<Panel id="arch-root" class="arch-root">
+  <div class="arch-title">HOLODECK ARCH</div>
+  <div class="arch-sub">Select a program</div>
+  <Button id="program-1" class="program-btn" size="sm" variant="secondary">
+    <ButtonLabel class="program-label">Dixon Hill, 1941 San Francisco</ButtonLabel>
+  </Button>
+  <Button id="program-2" class="program-btn" size="sm" variant="secondary">
+    <ButtonLabel class="program-label">Ancient West, Tombstone 1881</ButtonLabel>
+  </Button>
+  <Button id="program-3" class="program-btn" size="sm" variant="secondary">
+    <ButtonLabel class="program-label">Beach Resort, Risa</ButtonLabel>
+  </Button>
+  <div id="arch-status" class="arch-status">No program loaded.</div>
+  <Button id="arch-dismiss-btn" size="sm" variant="secondary">
+    <ButtonLabel class="program-label">Dismiss Arch</ButtonLabel>
+  </Button>
+</Panel>

@@ -1,0 +1,117 @@
+{
+  "components": {
+    "com.iwsdk.components.DomeGradient": {
+      "equator": [
+        0.008,
+        0.008,
+        0.01,
+        1
+      ],
+      "ground": [
+        0.0,
+        0.0,
+        0.0,
+        1
+      ],
+      "intensity": 1,
+      "sky": [
+        0.004,
+        0.004,
+        0.007,
+        1
+      ]
+    },
+    "com.iwsdk.components.IBLGradient": {
+      "equator": [
+        0.015,
+        0.015,
+        0.022,
+        1
+      ],
+      "ground": [
+        0.0,
+        0.0,
+        0.0,
+        1
+      ],
+      "intensity": 1,
+      "sky": [
+        0.015,
+        0.015,
+        0.022,
+        1
+      ]
+    }
+  },
+  "nodes": [
+    {
+      "components": {
+        "LocomotionEnvironment": {}
+      },
+      "content": {
+        "asset": "holodeck-room",
+        "type": "asset"
+      },
+      "id": "holodeck-room",
+      "name": "Holodeck Room",
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "components": {
+        "RayInteractable": {}
+      },
+      "content": {
+        "asset": "voice-bar",
+        "type": "asset"
+      },
+      "id": "voice-bar",
+      "name": "Voice Bar",
+      "transform": {
+        "position": [
+          1.9,
+          1.5,
+          -3.88
+        ],
+        "rotationDeg": [
+          0,
+          -26,
+          0
+        ],
+        "scale": 0.55
+      }
+    },
+    {
+      "components": {
+        "RayInteractable": {}
+      },
+      "content": {
+        "asset": "arch-panel",
+        "type": "asset"
+      },
+      "id": "arch-panel",
+      "name": "Arch Panel",
+      "transform": {
+        "position": [
+          -1.9,
+          1.6,
+          -3.88
+        ],
+        "rotationDeg": [
+          0,
+          26,
+          0
+        ],
+        "scale": 0.6
+      }
+    }
+  ],
+  "resources": {},
+  "units": "meters",
+  "version": "iwsdk.scene.v1"
+}
