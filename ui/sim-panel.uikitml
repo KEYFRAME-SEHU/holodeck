@@ -1,0 +1,81 @@
+<!--
+  SIM panel: the single holodeck control. Exactly three buttons (SIM 1/2/3)
+  plus End Program. Buttons only — no voice controls (Quest browser has no
+  speech recognition). UIKit units are centimetres. Horizon kit dark scheme.
+-->
+<meta preferred-color-scheme="dark" />
+<style>
+  .sim-root {
+    flex-direction: column;
+    width: 150;
+    border-color: #f5e900;
+    border-width: 1;
+    padding-top: 10;
+    padding-left: 12;
+    padding-right: 12;
+    padding-bottom: 12;
+  }
+
+  .sim-title {
+    color: #f5e900;
+    font-size: 7;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4;
+  }
+
+  .sim-sub {
+    color: #8a93a6;
+    font-size: 4;
+    text-align: center;
+    margin-bottom: 8;
+  }
+
+  .sim-list {
+    flex-direction: column;
+  }
+
+  .sim-btn {
+    margin-bottom: 6;
+  }
+
+  .sim-label {
+    font-size: 5;
+  }
+
+  .sim-status {
+    color: #cfe3ff;
+    font-size: 3.5;
+    margin-top: 6;
+    margin-bottom: 8;
+  }
+
+  .is-hidden {
+    display: none;
+  }
+</style>
+<Panel id="sim-root" class="sim-root">
+  <div class="sim-title">HOLODECK</div>
+  <div id="sim-sub" class="sim-sub">Desert in three forms: pick one</div>
+  <div id="sim-list" class="sim-list">
+    <Button id="sim-1" class="sim-btn" size="sm" variant="secondary">
+      <ButtonLabel class="sim-label">SIM 1</ButtonLabel>
+    </Button>
+    <Button id="sim-2" class="sim-btn" size="sm" variant="secondary">
+      <ButtonLabel class="sim-label">SIM 2</ButtonLabel>
+    </Button>
+    <Button id="sim-3" class="sim-btn" size="sm" variant="secondary">
+      <ButtonLabel class="sim-label">SIM 3</ButtonLabel>
+    </Button>
+  </div>
+  <div id="sim-status-idle" class="sim-status">No program loaded.</div>
+  <div id="sim-status-busy" class="sim-status is-hidden">Materializing...</div>
+  <div id="sim-status-run-sim-1" class="sim-status is-hidden">Program running: SIM 1. Press End Program.</div>
+  <div id="sim-status-run-sim-2" class="sim-status is-hidden">Program running: SIM 2. Press End Program.</div>
+  <div id="sim-status-run-sim-3" class="sim-status is-hidden">Program running: SIM 3. Press End Program.</div>
+  <div id="sim-status-no-video" class="sim-status is-hidden">SIM 2 video is still arriving. Check back soon.</div>
+  <div id="sim-status-no-splat" class="sim-status is-hidden">SIM 3 splat failed to load.</div>
+  <Button id="end-program-btn" class="sim-btn is-hidden" size="sm" variant="secondary">
+    <ButtonLabel class="sim-label">End Program</ButtonLabel>
+  </Button>
+</Panel>

@@ -62,54 +62,7 @@
         ]
       }
     },
-    {
-      "components": {
-        "RayInteractable": {}
-      },
-      "content": {
-        "asset": "voice-bar",
-        "type": "asset"
-      },
-      "id": "voice-bar",
-      "name": "Voice Bar",
-      "transform": {
-        "position": [
-          1.9,
-          1.5,
-          -3.88
-        ],
-        "rotationDeg": [
-          0,
-          -26,
-          0
-        ],
-        "scale": 0.55
-      }
-    },
-    {
-      "components": {
-        "RayInteractable": {}
-      },
-      "content": {
-        "asset": "arch-panel",
-        "type": "asset"
-      },
-      "id": "arch-panel",
-      "name": "Arch Panel",
-      "transform": {
-        "position": [
-          -1.9,
-          1.6,
-          -3.88
-        ],
-        "rotationDeg": [
-          0,
-          26,
-          0
-        ],
-        "scale": 0.6
-      }
-    }
+{"components":{"RayInteractable":{}},"content":{"asset":"sim-panel","type":"asset"},"id":"sim-panel","name":"SIM Panel","transform":{"position":[0,1.5,-3.3],"rotationDeg":[0,0,0],"scale":0.6}}
   ],
   "resources": {},
   "units": "meters",
