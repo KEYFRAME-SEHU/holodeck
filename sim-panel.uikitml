@@ -1,0 +1,105 @@
+<!--
+  SIM panel: the single holodeck control. Exactly three buttons (SIM 1/2/3)
+  plus End Program. Buttons only — no voice controls (Quest browser has no
+  speech recognition). UIKit units are centimetres. Techy dark-cyan scheme:
+  deep space background, glowing cyan edges, beveled buttons.
+-->
+<meta preferred-color-scheme="dark" />
+<style>
+  .sim-root {
+    flex-direction: column;
+    width: 160;
+    background-color: #0a1220;
+    border-color: #46d8ff;
+    border-width: 0.7;
+    border-radius: 4;
+    padding-top: 10;
+    padding-left: 12;
+    padding-right: 12;
+    padding-bottom: 12;
+  }
+
+  .sim-title {
+    color: #f5e900;
+    font-size: 7;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2;
+  }
+
+  .sim-sub {
+    color: #8fd8f5;
+    font-size: 3.5;
+    text-align: center;
+    margin-bottom: 8;
+  }
+
+  .sim-list {
+    flex-direction: column;
+  }
+
+  .sim-btn {
+    margin-bottom: 6;
+    border-radius: 3;
+    border-width: 0.4;
+    border-color: #8fd8f5;
+    background-color: #0e2a3f;
+  }
+
+  .sim-btn:hover {
+    background-color: #16405f;
+    border-color: #eafcff;
+  }
+
+  .sim-btn-end {
+    margin-bottom: 0;
+    border-radius: 3;
+    border-width: 0.4;
+    border-color: #ff9d9d;
+    background-color: #3d1522;
+  }
+
+  .sim-btn-end:hover {
+    background-color: #5c1f31;
+    border-color: #ffffff;
+  }
+
+  .sim-label {
+    font-size: 5;
+    font-weight: 700;
+    color: #eafcff;
+  }
+
+  .sim-status {
+    color: #cfe3ff;
+    font-size: 3.5;
+    margin-top: 6;
+    margin-bottom: 8;
+  }
+
+</style>
+<Panel id="sim-root" class="sim-root">
+  <div class="sim-title">HOLODECK</div>
+  <div id="sim-sub" class="sim-sub">Three programs, one holodeck</div>
+  <div id="sim-list" class="sim-list">
+    <Button id="sim-1" class="sim-btn" size="sm" variant="primary">
+      <ButtonLabel class="sim-label">Skybox</ButtonLabel>
+    </Button>
+    <Button id="sim-2" class="sim-btn" size="sm" variant="primary">
+      <ButtonLabel class="sim-label">360 Video</ButtonLabel>
+    </Button>
+    <Button id="sim-3" class="sim-btn" size="sm" variant="primary">
+      <ButtonLabel class="sim-label">World Labs build</ButtonLabel>
+    </Button>
+  </div>
+  <div id="sim-status-idle" class="sim-status">No program loaded.</div>
+  <div id="sim-status-busy" class="sim-status">Materializing...</div>
+  <div id="sim-status-run-sim-1" class="sim-status">Program running: Skybox. Press End Program.</div>
+  <div id="sim-status-run-sim-2" class="sim-status">Program running: 360 Video. Press End Program.</div>
+  <div id="sim-status-run-sim-3" class="sim-status">Program running: World Labs build. Press End Program.</div>
+  <div id="sim-status-no-video" class="sim-status">The 360 video is still arriving. Check back soon.</div>
+  <div id="sim-status-no-splat" class="sim-status">The World Labs build failed to load.</div>
+  <Button id="end-program-btn" class="sim-btn-end" size="sm" variant="negative">
+    <ButtonLabel class="sim-label">End Program</ButtonLabel>
+  </Button>
+</Panel>
