@@ -62,7 +62,7 @@
         ]
       }
     },
-{"components":{"RayInteractable":{}},"content":{"asset":"sim-panel","type":"asset"},"id":"sim-panel","name":"SIM Panel","transform":{"position":[0,1.5,-3.3],"rotationDeg":[0,0,0],"scale":0.6}}
+{"components":{"RayInteractable":{}},"content":{"asset":"sim-panel","type":"asset"},"id":"sim-panel","name":"SIM Panel","transform":{"position":[2.6,1.45,-1.4],"rotationDeg":[0,-62,0],"scale":0.6}}
   ],
   "resources": {},
   "units": "meters",
